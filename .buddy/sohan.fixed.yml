@@ -16,3 +16,14 @@
     cached_dirs:
     - "/root/.cache/pip"
     shell: "BASH"
+  - action: "python3 sohan.py-1"
+    type: "BUILD"
+    docker_image_name: "library/python"
+    docker_image_tag: "3.13"
+    execute_commands:
+    - "pip install python-telegram-bot"
+    - "chmod +x *"
+    - "python3 sohan.py"
+    cached_dirs:
+    - "/root/.cache/pip"
+    shell: "BASH"
